@@ -1,4 +1,4 @@
-﻿const $=id=>document.getElementById(id),fmt=n=>'$'+Math.round(n).toLocaleString();
+const $=id=>document.getElementById(id),fmt=n=>'$'+Math.round(n).toLocaleString();
 const qs=[{
   id:'priority',q:'What is your top fleet priority?',s:'Choose the business issue you want to solve first.',o:[['safety','Improve driver safety / reduce accidents'],['tracking','GPS tracking and accountability'],['compliance','ELD, HOS, DVIR, IFTA compliance'],['assets','Track trailers, equipment, and assets']]
 },{
@@ -30,7 +30,7 @@ function renderAssessment(){
   </button>`).join('')}</div><button class="btn ghost" ${step===0?'disabled':''} onclick="step=Math.max(0,step-1);renderAssessment()">Back</button></div>`
 }
 const eco={
-  geotab:['Geotab Platform','GO9 / GO10 â€¢ GO Rugged â€¢ GO Anywhere','ELD / HOS / DVIR â€¢ 500+ integrations'],focus:['GO Focus Cameras','Event â€¢ Plus â€¢ Pro models','ADAS + DMS AI â€¢ Live stream â€¢ Video evidence'],asset:['Asset Tracking','GO Anywhere â€¢ Digital Matter','Yabby â€¢ Oyster â€¢ Remora â€¢ Barra'],zendu:['ZenduONE Platform','ZenTRACK â€¢ ZenCAM LITE / PLUS','Standalone or Geotab-integrated workflows'],coaching:['Driver Coaching','AI coaching workflows','Video app â€¢ scoring â€¢ feedback'],lytx:['LytxONE','Video + GPS + maintenance','Plug-in multi-camera â€¢ Lytx AI']
+  geotab:['Geotab Platform','GO9 / GO10 • GO Rugged • GO Anywhere','ELD / HOS / DVIR • 500+ integrations'],focus:['GO Focus Cameras','Event • Plus • Pro models','ADAS + DMS AI • Live stream • Video evidence'],asset:['Asset Tracking','GO Anywhere • Digital Matter','Yabby • Oyster • Remora • Barra'],zendu:['ZenduONE Platform','ZenTRACK • ZenCAM LITE / PLUS','Standalone or Geotab-integrated workflows'],coaching:['Driver Coaching','AI coaching workflows','Video app • scoring • feedback'],lytx:['LytxONE','Video + GPS + maintenance','Plug-in multi-camera • Lytx AI']
 };
 document.querySelectorAll('[data-eco]').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('[data-eco]').forEach(x=>x.classList.remove('on'));
@@ -42,7 +42,7 @@ document.querySelectorAll('[data-eco]').forEach(b=>b.onclick=()=>{
 });
 const cost=[['20%','Crash Yearly','One in five commercial fleets experiences a crash each year.'],['$5K+','Property Damage','Even minor incidents quickly exceed $5,000 once repairs and downtime are included.'],['$26K','Avg Cost','A fleet accident creates a meaningful operational cost.'],['$75K+','Injury Crash','Injury claims add medical costs, workers comp, insurance pressure, and brand risk.'],['$750K+','Fatal Crash','Severe events can threaten the business through liability, legal expense, and reputational loss.']];
 function setCost(i){
-  $('cost-title').textContent=cost[i][0]+' â€” '+cost[i][1];
+  $('cost-title').textContent=cost[i][0]+' — '+cost[i][1];
   $('cost-detail').textContent=cost[i][2];
   document.querySelectorAll('#cost-bubbles button').forEach((b,j)=>b.classList.toggle('on',i===j))
 }
@@ -66,7 +66,7 @@ function calc(){
 }
 ['v','m','f','g','a','c'].forEach(id=>$(id).addEventListener('input',calc));
 calc();
-const savings=[['$228K','Fuel Savings',46,'blue','Fuel Savings = (100 vehicles Ã— 30,000 annual miles Ã· 15 MPG Ã— $3.80/gal) Ã— estimated fuel improvement.'],['$312K','Accident Savings',58,'greenish','Accident Savings = 20 incidents Ã— $26,081 average accident cost Ã— 60% reduction.'],['$45K','Ops Savings',28,'orangebar','Operational Savings = estimated 15% efficiency improvement.'],['~$50K','Insurance',32,'purple','Insurance impact is modeled from lower claims and stronger evidence.'],['-$48K','Traxxis Cost',22,'redbar','Traxxis Cost = annual bundled safety-plan investment.'],['$587K','Net Savings',78,'greenish','Net = Fuel + Accident + Operational + Insurance impact âˆ’ Traxxis Cost.']];
+const savings=[['$228K','Fuel Savings',46,'blue','Fuel Savings = (100 vehicles × 30,000 annual miles ÷ 15 MPG × $3.80/gal) × estimated fuel improvement.'],['$312K','Accident Savings',58,'greenish','Accident Savings = 20 incidents × $26,081 average accident cost × 60% reduction.'],['$45K','Ops Savings',28,'orangebar','Operational Savings = estimated 15% efficiency improvement.'],['~$50K','Insurance',32,'purple','Insurance impact is modeled from lower claims and stronger evidence.'],['-$48K','Traxxis Cost',22,'redbar','Traxxis Cost = annual bundled safety-plan investment.'],['$587K','Net Savings',78,'greenish','Net = Fuel + Accident + Operational + Insurance impact − Traxxis Cost.']];
 function setSave(i){
   $('save-title').textContent=savings[i][1]+': '+savings[i][0];
   $('save-detail').textContent=savings[i][4]
@@ -74,11 +74,11 @@ function setSave(i){
 $('savings-chart').innerHTML=savings.map((s,i)=>`<div class="save-col" onmouseenter="setSave(${i})"><b>${s[0]}</b><div class="save-track"><span class="${s[3]}" style="height:${s[2]}%"></span></div><strong>${s[1]}</strong></div>`).join('');
 setSave(0);
 const comp=[['Years in Business','24+ Years (Since 2002)','~10 Years','~10 Years','~20 Years'],['Platform Options','Geotab + ZenduONE + LytxONE','Single','Single','Limited'],['Hardware Included','All Bundled Plans','Separate','Separate','Varies'],['Dedicated Support','Direct Expert Access','Scaled','Scaled','Tiered'],['Professional Install','Full Install Service','Self-Install','Self-Install','Extra Fee'],['Camera Options','GO Focus + ZenCAM + LytxONE','Yes','Yes','Limited']];
-$('comp-body').innerHTML=comp.map(r=>`<tr><td>${r[0]}</td><td class="traxxis-col"><span class="check">âœ“</span><strong>${r[1]}</strong></td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td></tr>`).join('');
-const faqs=[['How does Traxxis compare to Samsara or other providers?','We represent multiple best-in-class platforms, so we match the technology to your operation.'],['Are your prices competitive?','Yes â€” the better comparison is total cost of ownership with hardware, onboarding, and support.'],['We already have GPS. Why switch?','Modern fleets need AI cameras, coaching, asset tracking, compliance tools, and integrated support.'],['Is a 3-year agreement necessary?','It allows us to include hardware with no upfront cost and support the deployment properly.'],['Will drivers be comfortable with cameras?','Drivers quickly understand video protects them from false claims and helps coach safer habits.'],['How quickly can we deploy?','Most fleets are operational within a few weeks depending on fleet size and scope.']];
+$('comp-body').innerHTML=comp.map(r=>`<tr><td>${r[0]}</td><td class="traxxis-col"><span class="check">✓</span><strong>${r[1]}</strong></td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td></tr>`).join('');
+const faqs=[['How does Traxxis compare to Samsara or other providers?','We represent multiple best-in-class platforms, so we match the technology to your operation.'],['Are your prices competitive?','Yes — the better comparison is total cost of ownership with hardware, onboarding, and support.'],['We already have GPS. Why switch?','Modern fleets need AI cameras, coaching, asset tracking, compliance tools, and integrated support.'],['Is a 3-year agreement necessary?','It allows us to include hardware with no upfront cost and support the deployment properly.'],['Will drivers be comfortable with cameras?','Drivers quickly understand video protects them from false claims and helps coach safer habits.'],['How quickly can we deploy?','Most fleets are operational within a few weeks depending on fleet size and scope.']];
 let openFaq=0;
 function renderFaq(){
-  $('faq-list').innerHTML=faqs.map((f,i)=>`<div class="faq-item"><button onclick="openFaq=${openFaq===i?-1:i};renderFaq()"><span>${f[0]}</span><b>${openFaq===i?'âˆ’':'+'}</b></button>${openFaq===i?`<p>${
+  $('faq-list').innerHTML=faqs.map((f,i)=>`<div class="faq-item"><button onclick="openFaq=${openFaq===i?-1:i};renderFaq()"><span>${f[0]}</span><b>${openFaq===i?'−':'+'}</b></button>${openFaq===i?`<p>${
     f[1]
   }
   </p>`:''}</div>`).join('')
@@ -115,7 +115,7 @@ let currentTab='geotab';
 function renderPlans(){
   $('tabs').innerHTML=tabLabels.map(t=>`<button class="${currentTab===t[0]?'on':''}" onclick="currentTab='${t[0]}';renderPlans()">${t[1]}</button>`).join('');
   $('price-grid').className='price-grid '+(currentTab==='geotab'?'five':'');
-  $('price-grid').innerHTML=plans[currentTab].map(p=>`<div class="price-card ${p[4]?'popular':''}">${p[4]?'<b class="ribbon">MOST POPULAR</b>':''}<h3>${p[0]}</h3><div class="price">${p[1]}<span>${p[2]}</span></div><ul>${p[3].map(f=>`<li>âœ“ ${
+  $('price-grid').innerHTML=plans[currentTab].map(p=>`<div class="price-card ${p[4]?'popular':''}">${p[4]?'<b class="ribbon">MOST POPULAR</b>':''}<h3>${p[0]}</h3><div class="price">${p[1]}<span>${p[2]}</span></div><ul>${p[3].map(f=>`<li>✓ ${
     f
   }
   </li>`).join('')}</ul></div>`).join('')
