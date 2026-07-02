@@ -30,15 +30,21 @@ function renderAssessment(){
   </button>`).join('')}</div><button class="btn ghost" ${step===0?'disabled':''} onclick="step=Math.max(0,step-1);renderAssessment()">Back</button></div>`
 }
 const eco={
-  geotab:['Geotab Platform','GO9 / GO10 • GO Rugged • GO Anywhere','ELD / HOS / DVIR • 500+ integrations'],focus:['GO Focus Cameras','Event • Plus • Pro models','ADAS + DMS AI • Live stream • Video evidence'],asset:['Asset Tracking','GO Anywhere • Digital Matter','Yabby • Oyster • Remora • Barra'],zendu:['ZenduONE Platform','ZenTRACK • ZenCAM LITE / PLUS','Standalone or Geotab-integrated workflows'],coaching:['Driver Coaching','AI coaching workflows','Video app • scoring • feedback'],lytx:['LytxONE','Video + GPS + maintenance','Plug-in multi-camera • Lytx AI']
+  geotab:{title:'Geotab Platform',description:'Connect vehicles, drivers, maintenance, compliance, and operational data in one flexible fleet platform.',benefits:['Real-time fleet visibility','Diagnostics and compliance','Open integration ecosystem'],fit:'Fleets that need a scalable operational foundation'},
+  focus:{title:'GO Focus Cameras',description:'Turn road and in-cab video into clear evidence, faster incident response, and proactive safety coaching.',benefits:['AI event detection','Road and driver visibility','Live streaming and video evidence'],fit:'Fleets focused on reducing risk and protecting drivers'},
+  asset:{title:'Asset Tracking',description:'Extend visibility beyond powered vehicles to trailers, equipment, containers, and other mobile assets.',benefits:['Long-life battery options','Theft and utilization visibility','Portable or installed hardware'],fit:'Operations with valuable non-powered assets'},
+  zendu:{title:'ZenduONE Platform',description:'Bring video, GPS, forms, maintenance, and mobile workflows together in a configurable operations platform.',benefits:['Unified fleet workflows','Flexible camera options','Standalone or Geotab-connected'],fit:'Fleets that need adaptable workflows and video operations'},
+  coaching:{title:'Driver Coaching',description:'Convert safety events into timely, consistent coaching that helps drivers improve before a serious incident.',benefits:['Real-time in-cab alerts','Scorecards and coaching workflows','Trackable safety improvement'],fit:'Safety teams building a proactive coaching culture'},
+  lytx:{title:'LytxONE',description:'Combine proven video safety, GPS tracking, and fleet maintenance tools in one driver-focused solution.',benefits:['AI-powered risk detection','Video evidence and coaching','Integrated vehicle visibility'],fit:'Fleets prioritizing mature video-safety programs'}
 };
 document.querySelectorAll('[data-eco]').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('[data-eco]').forEach(x=>x.classList.remove('on'));
   b.classList.add('on');
-  let d=eco[b.dataset.eco];
-  $('eco-title').textContent=d[0];
-  $('eco-sub').textContent=d[1];
-  $('eco-small').textContent=d[2]
+  const d=eco[b.dataset.eco];
+  $('eco-title').textContent=d.title;
+  $('eco-description').textContent=d.description;
+  $('eco-benefits').innerHTML=d.benefits.map(item=>`<span>${item}</span>`).join('');
+  $('eco-fit').textContent=d.fit
 });
 const cost=[['20%','Crash Yearly','One in five commercial fleets experiences a crash each year.'],['$5K+','Property Damage','Even minor incidents quickly exceed $5,000 once repairs and downtime are included.'],['$26K','Avg Cost','A fleet accident creates a meaningful operational cost.'],['$75K+','Injury Crash','Injury claims add medical costs, workers comp, insurance pressure, and brand risk.'],['$750K+','Fatal Crash','Severe events can threaten the business through liability, legal expense, and reputational loss.']];
 function setCost(i){
@@ -61,7 +67,7 @@ function calc(){
   $('fuel').textContent=fmt(fuel);
   $('accident').textContent=fmt(acc);
   $('ops').textContent=fmt(ops);
-  $('investment').textContent=fmt(inv);
+  $('investment').textContent='−'+fmt(inv);
   $('net').textContent=fmt(net)
 }
 ['v','m','f','g','a','c'].forEach(id=>$(id).addEventListener('input',calc));
