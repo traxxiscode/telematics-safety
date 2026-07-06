@@ -90,7 +90,7 @@ function renderFaq(){
   </p>`:''}</div>`).join('')
 }
 renderFaq();
-const times=[['D1','Sign & Order','Agreement executed and onboarding begins.'],['W1','Hardware Ships','Pre-configured devices ship ready to install.'],['W3','Install & Training','Onsite install and training completed.'],['M1','Go Live','Fleet is fully operational.'],['M3-6','Break-Even','Savings exceed monthly investment.'],['YB1+','Full ROI','Long-term savings and optimization.']];
+const times=[['Day 1','Sign & Order','Agreement executed and onboarding begins.'],['Week 1','Hardware Ships','Pre-configured devices ship ready to install.'],['Week 3','Install & Training','Onsite install and training completed.'],['Month 1','Go Live','Fleet is fully operational.'],['Months 3–6','Break-Even','Savings exceed monthly investment.'],['Year 1 and Beyond','Full ROI','Long-term savings and optimization.']];
 function setTime(i){
   $('time-title').textContent=times[i][1];
   $('time-detail').textContent=times[i][2];
