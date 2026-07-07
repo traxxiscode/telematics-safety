@@ -2159,4 +2159,61 @@ header:after {
   }
 }
 
+/* Keep information-dense sections within a comfortable viewport. */
+@media(min-width:801px) {
+  #ecosystem,#visuals,#cost,#distraction,#roi,#savings,
+  #competition,#faq,#timeline,#pricing {
+    padding-top:88px;
+    padding-bottom:88px
+  }
+  #ecosystem h2,#visuals h2,#cost h2,#distraction h2,#roi h2,
+  #savings h2,#competition h2,#faq h2,#timeline h2,#pricing h2 {
+    margin:18px 0 20px;
+    font-size:clamp(2.75rem,4.15vw,4.5rem)
+  }
+  #ecosystem .eco-grid {
+    align-items:start;
+    gap:28px;
+    margin-top:36px
+  }
+  #ecosystem .eco-stack {
+    gap:12px
+  }
+  #ecosystem .eco-stack button {
+    min-height:0;
+    padding:18px 20px;
+    border-radius:18px
+  }
+  #ecosystem .eco-logo img {
+    width:104px;
+    height:104px
+  }
+  #ecosystem .eco-center-label {
+    margin:12px 0 16px
+  }
+  #ecosystem .eco-detail {
+    min-height:250px;
+    padding:26px;
+    border-radius:22px
+  }
+  #ecosystem .note {
+    margin-top:24px
+  }
+  #visuals .product-grid,#roi .roi-grid,#savings .savings-chart,
+  #competition .compare-proof-strip,#competition .table-wrap,
+  #timeline .roi-line,#pricing .micro,#pricing .tabs,#pricing .price-grid {
+    margin-top:38px
+  }
+}
+
+@media(max-width:800px) {
+  #ecosystem .eco-grid {
+    margin-top:34px
+  }
+  #ecosystem .eco-detail {
+    min-height:0;
+    padding:24px
+  }
+}
+
 
