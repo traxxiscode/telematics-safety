@@ -396,6 +396,10 @@ p,.lead {
   color:var(--text);
   font-weight:900
 }
+.outcomes-panel .proof-line {
+  grid-column:1/-1;
+  margin-top:0
+}
 @keyframes traxxisPulse {
   50% {
     box-shadow:inset 0 0 42px rgba(0,168,204,.08),0 0 55px rgba(0,168,204,.14)
@@ -2248,6 +2252,174 @@ header:after {
   #ecosystem .eco-detail {
     min-height:0;
     padding:24px
+  }
+}
+
+/* Expandable ecosystem bubbles */
+#ecosystem .eco-grid {
+  grid-template-columns:minmax(250px,1fr) minmax(280px,340px) minmax(250px,1fr);
+  align-items:center;
+  gap:clamp(24px,4vw,64px);
+  max-width:1240px;
+  margin-left:auto;
+  margin-right:auto
+}
+#ecosystem .eco-stack {
+  gap:18px
+}
+#ecosystem .eco-stack button,
+#ecosystem .eco-stack button.orange {
+  position:relative;
+  width:100%;
+  min-height:108px;
+  padding:24px 30px;
+  overflow:hidden;
+  border-radius:999px;
+  background:linear-gradient(135deg,rgba(59,130,246,.10),rgba(139,92,246,.07));
+  border:1px solid rgba(147,197,253,.26);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+  transition:min-height .35s ease,border-radius .35s ease,transform .22s ease,border-color .22s ease,background .22s ease,box-shadow .22s ease
+}
+#ecosystem .eco-stack:last-child button {
+  background:linear-gradient(135deg,rgba(236,72,153,.08),rgba(249,115,22,.07));
+  border-color:rgba(240,171,252,.24)
+}
+#ecosystem .eco-stack button:hover {
+  transform:translateY(-3px)
+}
+#ecosystem .eco-stack button.on {
+  min-height:330px;
+  border-radius:42px;
+  transform:scale(1.035);
+  border-color:rgba(96,165,250,.72);
+  background:radial-gradient(circle at 20% 0%,rgba(59,130,246,.22),transparent 52%),rgba(20,24,42,.92);
+  box-shadow:0 26px 70px rgba(30,64,175,.24),inset 0 1px 0 rgba(255,255,255,.08)
+}
+#ecosystem .eco-stack:last-child button.on {
+  border-color:rgba(232,121,249,.65);
+  background:radial-gradient(circle at 85% 0%,rgba(236,72,153,.2),transparent 54%),rgba(25,20,40,.92);
+  box-shadow:0 26px 70px rgba(126,34,206,.22),inset 0 1px 0 rgba(255,255,255,.08)
+}
+#ecosystem .eco-stack button>strong {
+  font-size:.92rem;
+  line-height:1.25
+}
+#ecosystem .eco-stack button>span:not(.eco-expanded) {
+  display:block;
+  margin-top:7px;
+  color:var(--dim);
+  font-size:.8rem;
+  line-height:1.4
+}
+#ecosystem .eco-expanded {
+  display:block;
+  max-height:0;
+  opacity:0;
+  visibility:hidden;
+  transition:max-height .35s ease,opacity .2s ease .02s,visibility 0s linear .35s
+}
+#ecosystem button.on .eco-expanded {
+  max-height:260px;
+  opacity:1;
+  visibility:visible;
+  transition:max-height .35s ease,opacity .3s ease .12s,visibility 0s
+}
+#ecosystem .eco-description {
+  display:block;
+  margin-top:20px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.1);
+  color:var(--soft);
+  font-size:.86rem;
+  line-height:1.55
+}
+#ecosystem .eco-benefits {
+  display:grid;
+  gap:6px;
+  margin:15px 0
+}
+#ecosystem .eco-benefits span {
+  padding-left:19px;
+  font-size:.78rem
+}
+#ecosystem .eco-fit {
+  padding-top:12px
+}
+#ecosystem .eco-fit span,
+#ecosystem .eco-fit b {
+  display:block
+}
+#ecosystem .eco-fit b {
+  margin-top:5px;
+  color:#c4b5fd;
+  font-size:.78rem;
+  line-height:1.4
+}
+#ecosystem .eco-center {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center
+}
+#ecosystem .eco-logo {
+  width:clamp(260px,24vw,330px);
+  height:clamp(260px,24vw,330px);
+  margin:0;
+  filter:drop-shadow(0 30px 55px rgba(37,99,235,.24)) drop-shadow(0 12px 30px rgba(249,115,22,.16))
+}
+#ecosystem .eco-logo img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  filter:none
+}
+#ecosystem .eco-center-label {
+  margin:20px 0 0;
+  color:#dbeafe
+}
+
+@media(max-width:1100px) {
+  #ecosystem .eco-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    align-items:start
+  }
+  #ecosystem .eco-center {
+    grid-column:1/-1;
+    grid-row:1
+  }
+}
+
+@media(max-width:800px) {
+  #ecosystem .eco-grid {
+    grid-template-columns:1fr;
+    gap:18px
+  }
+  #ecosystem .eco-center {
+    grid-column:1;
+    grid-row:auto;
+    order:-1;
+    margin-bottom:12px
+  }
+  #ecosystem .eco-logo {
+    width:min(72vw,290px);
+    height:min(72vw,290px)
+  }
+  #ecosystem .eco-stack button,
+  #ecosystem .eco-stack button.orange {
+    min-height:100px;
+    padding:22px 26px
+  }
+  #ecosystem .eco-stack button.on {
+    min-height:320px;
+    border-radius:36px;
+    transform:none
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  #ecosystem .eco-stack button,
+  #ecosystem .eco-expanded {
+    transition:none
   }
 }
 
