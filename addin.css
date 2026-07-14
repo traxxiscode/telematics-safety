@@ -2362,8 +2362,8 @@ header:after {
   justify-content:center
 }
 #ecosystem .eco-logo {
-  width:clamp(260px,24vw,330px);
-  height:clamp(260px,24vw,330px);
+  width:clamp(245px,23vw,315px);
+  height:clamp(245px,23vw,315px);
   margin:0;
   filter:drop-shadow(0 30px 55px rgba(37,99,235,.24)) drop-shadow(0 12px 30px rgba(249,115,22,.16))
 }
@@ -2401,8 +2401,8 @@ header:after {
     margin-bottom:12px
   }
   #ecosystem .eco-logo {
-    width:min(72vw,290px);
-    height:min(72vw,290px)
+    width:min(68vw,275px);
+    height:min(68vw,275px)
   }
   #ecosystem .eco-stack button,
   #ecosystem .eco-stack button.orange {
