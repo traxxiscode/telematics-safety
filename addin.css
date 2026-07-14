@@ -364,6 +364,38 @@ p,.lead {
   text-align:center;
   text-transform:uppercase
 }
+.outcomes-panel {
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:26px;
+  margin-top:28px;
+  padding:28px;
+  border-radius:22px;
+  background:linear-gradient(135deg,rgba(0,168,204,.12),rgba(255,104,32,.07));
+  border:1px solid rgba(255,255,255,.12)
+}
+.outcomes-panel h3 {
+  margin:0 0 10px;
+  color:var(--orange);
+  font-size:1.35rem
+}
+.outcomes-panel p {
+  margin:0;
+  color:var(--soft);
+  line-height:1.65
+}
+.outcomes-panel ul {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px 22px;
+  margin:0;
+  padding:0;
+  list-style:none
+}
+.outcomes-panel li {
+  color:var(--text);
+  font-weight:900
+}
 @keyframes traxxisPulse {
   50% {
     box-shadow:inset 0 0 42px rgba(0,168,204,.08),0 0 55px rgba(0,168,204,.14)
@@ -1653,6 +1685,9 @@ footer {
   nav {
     height:68px;
     padding:18px 22px
+  }
+  .outcomes-panel,.outcomes-panel ul {
+    grid-template-columns:1fr
   }
   .nav-logo {
     height:25px
