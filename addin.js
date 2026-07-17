@@ -63,7 +63,7 @@ function calc(){
 }
 ['v','m','f','g','a','c'].forEach(id=>$(id).addEventListener('input',calc));
 calc();
-const savings=[['$228K','Fuel Savings',46,'blue','Fuel Savings = (100 vehicles × 30,000 annual miles ÷ 15 MPG × $3.80/gal) × estimated fuel improvement.'],['$312K','Accident Savings',58,'greenish','Accident Savings = 20 incidents × $26,081 average accident cost × 60% reduction.'],['$45K','Ops Savings',28,'orangebar','Operational Savings = estimated 15% efficiency improvement.'],['~$50K','Insurance',32,'purple','Insurance impact is modeled from lower claims and stronger evidence.'],['-$48K','Traxxis Cost',22,'redbar','Traxxis Cost = annual bundled safety-plan investment.'],['$587K','Net Savings',78,'greenish','Net = Fuel + Accident + Operational + Insurance impact − Traxxis Cost.']];
+const savings=[['$228K','Fuel Savings',46,'blue','Fuel Savings = (100 vehicles × 30,000 annual miles ÷ 15 MPG × $3.80/gal) × estimated fuel improvement.'],['$312K','Accident Savings',58,'greenish','Accident Savings = 20 incidents × $26,081 average accident cost × 60% reduction.'],['$45K','Ops Savings',28,'orangebar','Operational Savings = estimated 15% efficiency improvement.'],['~$50K','Insurance',32,'purple','Insurance impact is modeled from lower claims and stronger evidence.'],['-$48K','Traxxis Investment',22,'redbar','Traxxis Investment = annual bundled safety-plan investment.'],['$587K','Net Savings',78,'greenish','Net = Fuel + Accident + Operational + Insurance impact − Traxxis Investment.']];
 function setSave(i){
   $('save-title').textContent=savings[i][1]+': '+savings[i][0];
   $('save-detail').textContent=savings[i][4]
