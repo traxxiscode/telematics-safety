@@ -1223,13 +1223,13 @@ footer {
   --text:#f8fafc;
   --soft:#c2c9d6;
   --dim:#8892a7;
-  --orange:#ec4899;
+  --orange:#f97316;
   --cyan:#3b82f6;
   --green:#22c55e;
   --purple:#8b5cf6;
   --warm:#fb923c;
   --border:rgba(255,255,255,.10);
-  --accent-gradient:linear-gradient(100deg,#3b82f6 0%,#8b5cf6 48%,#ec4899 78%,#fb923c 110%)
+  --accent-gradient:linear-gradient(100deg,#3b82f6 0%,#8b5cf6 48%,#f97316 78%,#fb923c 110%)
 }
 body {
   background:#05070d;
@@ -1240,7 +1240,7 @@ body {
   overflow:hidden;
   background:
     radial-gradient(circle at 12% 8%,rgba(59,130,246,.16),transparent 25%),
-    radial-gradient(circle at 88% 12%,rgba(236,72,153,.11),transparent 28%),
+    radial-gradient(circle at 88% 12%,rgba(249,115,22,.11),transparent 28%),
     linear-gradient(180deg,#080c16 0%,#05070d 100%)
 }
 nav {
@@ -1274,7 +1274,7 @@ header {
   padding:92px 28px 112px;
   background:
     radial-gradient(circle at 18% 30%,rgba(59,130,246,.18),transparent 30%),
-    radial-gradient(circle at 78% 34%,rgba(236,72,153,.13),transparent 30%)
+    radial-gradient(circle at 78% 34%,rgba(249,115,22,.13),transparent 30%)
 }
 header:after {
   content:'';
@@ -1412,7 +1412,7 @@ p,.lead {
   background:radial-gradient(circle at 20% 0%,rgba(59,130,246,.15),transparent 48%),rgba(255,255,255,.025)
 }
 .platforms>div:nth-child(2),.advisor>div:nth-child(2),.product:nth-child(3n+2) {
-  background:radial-gradient(circle at 50% 0%,rgba(236,72,153,.13),transparent 50%),rgba(255,255,255,.025)
+  background:radial-gradient(circle at 50% 0%,rgba(249,115,22,.13),transparent 50%),rgba(255,255,255,.025)
 }
 .platforms>div:nth-child(3),.advisor>div:nth-child(3),.product:nth-child(3n+3) {
   background:radial-gradient(circle at 80% 0%,rgba(251,146,60,.13),transparent 50%),rgba(255,255,255,.025)
@@ -1470,7 +1470,7 @@ p,.lead {
   border-right-color:rgba(139,92,246,.36)
 }
 .other {
-  background:radial-gradient(circle at 90% 0%,rgba(236,72,153,.14),transparent 46%),rgba(255,255,255,.012)
+  background:radial-gradient(circle at 90% 0%,rgba(249,115,22,.14),transparent 46%),rgba(255,255,255,.012)
 }
 .diff-badge {
   background:rgba(59,130,246,.1);
@@ -1478,9 +1478,9 @@ p,.lead {
   color:#93c5fd
 }
 .diff-badge.muted {
-  background:rgba(236,72,153,.09);
-  border-color:rgba(236,72,153,.28);
-  color:#f9a8d4
+  background:rgba(249,115,22,.09);
+  border-color:rgba(249,115,22,.28);
+  color:#fdba74
 }
 .proof-line {
   background:rgba(139,92,246,.08);
@@ -1505,23 +1505,23 @@ p,.lead {
 }
 .eco-stack button.on {
   border-color:#8b5cf6;
-  background:linear-gradient(135deg,rgba(59,130,246,.11),rgba(236,72,153,.08));
+  background:linear-gradient(135deg,rgba(59,130,246,.11),rgba(249,115,22,.08));
   box-shadow:0 24px 60px rgba(91,33,182,.2)
 }
 .eco-stack strong,.orange strong {
   color:#93c5fd!important
 }
 .eco-stack button.orange strong {
-  color:#f0abfc!important
+  color:#fdba74!important
 }
 .eco-logo img {
-  filter:drop-shadow(0 20px 35px rgba(236,72,153,.2))
+  filter:drop-shadow(0 20px 35px rgba(249,115,22,.2))
 }
 .eco-detail {
   min-height:320px;
   border-radius:28px;
   border-color:rgba(139,92,246,.24);
-  background:radial-gradient(circle at 20% 0%,rgba(59,130,246,.14),transparent 42%),radial-gradient(circle at 100% 100%,rgba(236,72,153,.1),transparent 48%),rgba(255,255,255,.025)
+  background:radial-gradient(circle at 20% 0%,rgba(59,130,246,.14),transparent 42%),radial-gradient(circle at 100% 100%,rgba(249,115,22,.1),transparent 48%),rgba(255,255,255,.025)
 }
 .eco-detail h3 {
   color:#fff
@@ -1574,7 +1574,7 @@ p,.lead {
   min-height:158px
 }
 .roi-box strong {
-  color:#f472b6
+  color:#fb923c
 }
 .cost-text {
   color:#fb923c!important
@@ -1607,7 +1607,7 @@ table {
 }
 .tabs .on {
   border-color:#8b5cf6;
-  background:linear-gradient(100deg,rgba(59,130,246,.16),rgba(236,72,153,.13))
+  background:linear-gradient(100deg,rgba(59,130,246,.16),rgba(249,115,22,.13))
 }
 .price-grid {
   gap:22px
@@ -1616,7 +1616,7 @@ table {
   padding:42px 28px 28px
 }
 .price-card.popular {
-  border-color:rgba(236,72,153,.5);
+  border-color:rgba(249,115,22,.5);
   box-shadow:0 28px 75px rgba(139,92,246,.17)
 }
 .ribbon {
@@ -1654,14 +1654,14 @@ table {
   background:rgba(139,92,246,.06)
 }
 .roi-line button.on b {
-  border-color:#ec4899;
+  border-color:#f97316;
   color:#fff;
-  background:linear-gradient(135deg,#3b82f6,#8b5cf6,#ec4899);
+  background:linear-gradient(135deg,#3b82f6,#8b5cf6,#f97316);
   box-shadow:0 0 35px rgba(139,92,246,.38)
 }
 .closing {
   padding:135px 38px;
-  background:radial-gradient(circle at 20% 20%,rgba(59,130,246,.18),transparent 34%),radial-gradient(circle at 80% 70%,rgba(236,72,153,.15),transparent 36%)
+  background:radial-gradient(circle at 20% 20%,rgba(59,130,246,.18),transparent 34%),radial-gradient(circle at 80% 70%,rgba(249,115,22,.15),transparent 36%)
 }
 .closing h2 {
   font-size:clamp(4.2rem,9vw,8.8rem);
@@ -1820,7 +1820,7 @@ header>.hero-logo {
   position:absolute;
   inset:8% -8% -6% 10%;
   border-radius:50%;
-  background:radial-gradient(circle,rgba(139,92,246,.25),rgba(236,72,153,.1) 42%,transparent 70%);
+  background:radial-gradient(circle,rgba(139,92,246,.25),rgba(249,115,22,.1) 42%,transparent 70%);
   filter:blur(22px)
 }
 .hero-video-card {
@@ -2031,7 +2031,7 @@ header {
   padding-top:148px;
   background:
     radial-gradient(circle at 15% 20%,rgba(59,130,246,.18),transparent 40%),
-    radial-gradient(circle at 85% 15%,rgba(236,72,153,.14),transparent 35%),
+    radial-gradient(circle at 85% 15%,rgba(249,115,22,.14),transparent 35%),
     radial-gradient(circle at 70% 80%,rgba(251,146,60,.10),transparent 45%),
     linear-gradient(180deg,#060b16 0%,#0b1220 56%,#0f172a 100%)
 }
@@ -2063,7 +2063,7 @@ header:after {
 #difference,#discovery,#ecosystem,#cost,#distraction,#roi,#competition,#timeline,#pricing {
   background:
     radial-gradient(circle at 18% 0%,rgba(59,130,246,.08),transparent 42%),
-    radial-gradient(circle at 82% 18%,rgba(236,72,153,.06),transparent 45%),
+    radial-gradient(circle at 82% 18%,rgba(249,115,22,.06),transparent 45%),
     linear-gradient(180deg,#050505 0%,#070910 100%)
 }
 #difference {
@@ -2072,14 +2072,14 @@ header:after {
 #discovery,#ecosystem,#distraction,#roi,#timeline,#pricing {
   background:
     radial-gradient(circle at 0% 10%,rgba(59,130,246,.11),transparent 42%),
-    radial-gradient(circle at 100% 20%,rgba(236,72,153,.08),transparent 46%),
+    radial-gradient(circle at 100% 20%,rgba(249,115,22,.08),transparent 46%),
     radial-gradient(circle at 50% 100%,rgba(251,146,60,.045),transparent 55%),
     linear-gradient(180deg,#070a12 0%,#05070d 100%)
 }
 #visuals {
   background:
     radial-gradient(circle at 0% 0%,rgba(59,130,246,.10),transparent 44%),
-    radial-gradient(circle at 100% 20%,rgba(236,72,153,.075),transparent 44%),
+    radial-gradient(circle at 100% 20%,rgba(249,115,22,.075),transparent 44%),
     linear-gradient(180deg,#080c16 0%,#05070d 100%)
 }
 
@@ -2089,7 +2089,7 @@ header:after {
   background:
     radial-gradient(circle at 15% 20%,rgba(37,99,235,.08),transparent 45%),
     radial-gradient(circle at 85% 75%,rgba(124,58,237,.06),transparent 48%),
-    radial-gradient(circle at 50% 100%,rgba(236,72,153,.035),transparent 58%),
+    radial-gradient(circle at 50% 100%,rgba(249,115,22,.035),transparent 58%),
     linear-gradient(180deg,#fff 0%,#f6f8fc 100%);
   box-shadow:0 -60px 110px rgba(59,130,246,.06),0 60px 110px rgba(139,92,246,.05)
 }
@@ -2133,7 +2133,7 @@ header:after {
   background:radial-gradient(circle at 20% 0%,rgba(59,130,246,.11),transparent 52%),rgba(255,255,255,.88)
 }
 #platforms .platforms>div:nth-child(2) {
-  background:radial-gradient(circle at 50% 0%,rgba(236,72,153,.09),transparent 52%),rgba(255,255,255,.88)
+  background:radial-gradient(circle at 50% 0%,rgba(249,115,22,.09),transparent 52%),rgba(255,255,255,.88)
 }
 #platforms .platforms>div:nth-child(3) {
   background:radial-gradient(circle at 80% 0%,rgba(251,146,60,.10),transparent 52%),rgba(255,255,255,.88)
@@ -2281,8 +2281,8 @@ header:after {
   transition:min-height .35s ease,border-radius .35s ease,transform .22s ease,border-color .22s ease,background .22s ease,box-shadow .22s ease
 }
 #ecosystem .eco-stack:last-child button {
-  background:linear-gradient(135deg,rgba(236,72,153,.08),rgba(249,115,22,.07));
-  border-color:rgba(240,171,252,.24)
+  background:linear-gradient(135deg,rgba(249,115,22,.08),rgba(251,146,60,.07));
+  border-color:rgba(253,186,116,.24)
 }
 #ecosystem .eco-stack button:hover {
   transform:translateY(-3px)
@@ -2296,8 +2296,8 @@ header:after {
   box-shadow:0 26px 70px rgba(30,64,175,.24),inset 0 1px 0 rgba(255,255,255,.08)
 }
 #ecosystem .eco-stack:last-child button.on {
-  border-color:rgba(232,121,249,.65);
-  background:radial-gradient(circle at 85% 0%,rgba(236,72,153,.2),transparent 54%),rgba(25,20,40,.92);
+  border-color:rgba(251,146,60,.65);
+  background:radial-gradient(circle at 85% 0%,rgba(249,115,22,.2),transparent 54%),rgba(25,20,40,.92);
   box-shadow:0 26px 70px rgba(126,34,206,.22),inset 0 1px 0 rgba(255,255,255,.08)
 }
 #ecosystem .eco-stack button>strong {
