@@ -2524,4 +2524,230 @@ header:after {
   background-image:none
 }
 
+/* Semantic shell: navigation belongs to the site header; the hero belongs to main. */
+.site-header {
+  position:relative;
+  z-index:100;
+  width:100%;
+  height:0;
+  min-height:0!important;
+  padding:0!important;
+  background:none!important
+}
+.site-header:after {
+  display:none!important
+}
+.hero {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:auto;
+  padding:148px 44px 105px;
+  text-align:left;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(59,130,246,.18),transparent 40%),
+    radial-gradient(circle at 85% 15%,rgba(249,115,22,.14),transparent 35%),
+    radial-gradient(circle at 70% 80%,rgba(251,146,60,.10),transparent 45%),
+    linear-gradient(180deg,#060b16 0%,#0b1220 56%,#0f172a 100%)
+}
+.hero:after {
+  content:'';
+  position:absolute;
+  z-index:-1;
+  left:0;
+  right:0;
+  bottom:-1px;
+  height:110px;
+  background:linear-gradient(180deg,transparent 0%,rgba(5,5,5,.55) 65%,#050505 100%)
+}
+.hero>.hero-logo {
+  display:none
+}
+.nav-brand-wrap {
+  text-decoration:none
+}
+.nav-phone svg,
+.button-icon,
+.advisor-icon svg {
+  width:20px;
+  height:20px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round
+}
+.button-icon {
+  flex:0 0 auto;
+  margin-right:9px
+}
+
+/* Recognition is intentionally separate from the first impression. */
+.recognition-section {
+  position:relative;
+  padding:48px max(54px,calc((100vw - 1212px)/2)) 58px;
+  background:#050505;
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.07)
+}
+.recognition-inner {
+  width:min(1212px,100%);
+  margin:0 auto
+}
+.sr-only {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0
+}
+.recognition-stats,
+.recognition-pillars {
+  max-width:none;
+  margin:0
+}
+.recognition-stats {
+  margin-bottom:24px
+}
+.recognition-stats div,
+.recognition-pillars div {
+  padding:16px 28px;
+  border:0;
+  border-left:1px solid rgba(255,255,255,.12);
+  border-radius:0;
+  background:transparent;
+  box-shadow:none
+}
+.recognition-stats div:first-child,
+.recognition-pillars div:first-child {
+  border-left:0
+}
+.recognition-pillars {
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.08)
+}
+.recognition-pillars div {
+  border-top:0!important
+}
+.recognition-pillars strong {
+  display:block;
+  color:#fb923c;
+  text-transform:uppercase;
+  letter-spacing:.12em
+}
+.recognition-pillars span {
+  display:block;
+  margin-top:7px;
+  color:#9fa9ba;
+  line-height:1.45
+}
+
+/* One assessment card, with progress contained inside it. */
+.assessment-card .progress {
+  margin-bottom:30px;
+  padding:6px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;
+  background:rgba(255,255,255,.025)
+}
+.assessment-card .progress .active,
+.assessment-card .progress .done {
+  background:linear-gradient(90deg,#3b82f6,#7c3aed)
+}
+.assessment-card.is-complete {
+  display:none
+}
+.assessment-back {
+  margin-top:8px
+}
+
+/* Advisor options read as one grouped list separated by rules, not more cards. */
+.advisor {
+  gap:0
+}
+.advisor>.advisor-item {
+  display:flex;
+  align-items:flex-start;
+  gap:18px;
+  padding:12px 28px;
+  border:0!important;
+  border-left:1px solid rgba(255,255,255,.12)!important;
+  border-radius:0;
+  background:transparent!important;
+  box-shadow:none!important
+}
+.advisor>.advisor-item:first-child {
+  border-left:0!important
+}
+.advisor>.advisor-item:hover {
+  transform:none!important
+}
+.advisor-icon {
+  display:grid;
+  flex:0 0 42px;
+  width:42px;
+  height:42px;
+  place-items:center;
+  border-radius:12px;
+  color:#93c5fd;
+  background:rgba(59,130,246,.09);
+  border:1px solid rgba(96,165,250,.2)
+}
+.advisor-item h3 {
+  margin:0 0 7px
+}
+.advisor-item p {
+  margin:0
+}
+
+[id] {
+  scroll-margin-top:86px
+}
+
+@media(max-width:1100px) {
+  .hero {
+    padding:132px 32px 86px
+  }
+}
+@media(max-width:800px) {
+  .hero {
+    padding:104px 20px 72px
+  }
+  .recognition-section {
+    padding:38px 22px 46px
+  }
+  .recognition-stats,
+  .recognition-pillars {
+    grid-template-columns:1fr
+  }
+  .recognition-stats div,
+  .recognition-pillars div,
+  .recognition-stats div:first-child,
+  .recognition-pillars div:first-child {
+    padding:18px 0;
+    border-left:0;
+    border-top:1px solid rgba(255,255,255,.1)
+  }
+  .recognition-stats div:first-child,
+  .recognition-pillars div:first-child {
+    border-top:0
+  }
+  .advisor {
+    grid-template-columns:1fr
+  }
+  .advisor>.advisor-item,
+  .advisor>.advisor-item:first-child {
+    padding:22px 0;
+    border-left:0!important;
+    border-top:1px solid rgba(255,255,255,.12)!important
+  }
+  .advisor>.advisor-item:first-child {
+    border-top:0!important
+  }
+}
+
 

@@ -66,6 +66,7 @@ ecosystem.querySelectorAll('[data-eco]').forEach(trigger => {
 });
 
 const assessment = document.querySelector('[data-assessment]');
+const assessmentCard = assessment.querySelector('.assessment-card');
 const assessmentSteps = assessment.querySelectorAll('[data-assessment-step]');
 const assessmentResults = assessment.querySelectorAll('[data-assessment-result]');
 const assessmentProgress = assessment.querySelectorAll('.progress span');
@@ -81,6 +82,7 @@ function recommendationKey() {
 
 function renderAssessmentState() {
   const complete = assessmentStep >= assessmentSteps.length;
+  assessmentCard.classList.toggle('is-complete', complete);
 
   assessmentSteps.forEach((panel, index) => {
     panel.classList.toggle('is-active', !complete && index === assessmentStep);
