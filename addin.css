@@ -2423,4 +2423,34 @@ header:after {
   }
 }
 
+/* Intentional headline emphasis: highlighted words should stand on their own. */
+#competition .comparison-title {
+  display:flex;
+  align-items:baseline;
+  gap:.22em;
+  flex-wrap:wrap
+}
+#competition .comparison-title .comparison-side {
+  font-size:.46em;
+  line-height:1;
+  letter-spacing:-.025em
+}
+#competition .comparison-title .comparison-vs {
+  color:var(--orange);
+  font-size:1em;
+  line-height:.85;
+  letter-spacing:-.06em
+}
+.closing h2 span:last-child {
+  color:inherit;
+  background:none
+}
+.closing h2 em {
+  color:transparent;
+  background:var(--accent-gradient);
+  background-clip:text;
+  -webkit-background-clip:text;
+  font-style:normal
+}
+
 
