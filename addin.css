@@ -2453,4 +2453,13 @@ header:after {
   font-style:normal
 }
 
+/* Give gradient text room for glyph overhang without changing visual spacing. */
+.section h2 em,
+.closing h2 em {
+  padding-inline:.025em .09em;
+  margin-inline:-.025em -.09em;
+  -webkit-box-decoration-break:clone;
+  box-decoration-break:clone
+}
+
 
