@@ -189,7 +189,95 @@
 <em>Best-Fit</em>
 <br>Solution</h2>
 <p class="lead">This guided experience helps identify whether your fleet needs advanced fleet management, video safety, compliance, asset tracking, or a combination of solutions.</p>
-<div class="tool" id="assessment">
+<div class="tool" id="assessment" data-assessment>
+<div class="progress" aria-hidden="true"><span class="active"></span><span></span><span></span><span></span></div>
+
+<div class="tool-card assessment-step is-active" data-assessment-step="0">
+<small>STEP 1 / 4</small>
+<h3>What is your top fleet priority?</h3>
+<p>Choose the business issue you want to solve first.</p>
+<div class="options">
+<button type="button" data-answer="priority" data-value="safety">Improve driver safety / reduce accidents</button>
+<button type="button" data-answer="priority" data-value="tracking">GPS tracking and accountability</button>
+<button type="button" data-answer="priority" data-value="compliance">ELD, HOS, DVIR, IFTA compliance</button>
+<button type="button" data-answer="priority" data-value="assets">Track trailers, equipment, and assets</button>
+</div>
+</div>
+
+<div class="tool-card assessment-step" data-assessment-step="1">
+<small>STEP 2 / 4</small>
+<h3>What type of fleet do you operate?</h3>
+<p>This helps match the right platform and product mix.</p>
+<div class="options">
+<button type="button" data-answer="fleet" data-value="field">Field service / pickup / van fleet</button>
+<button type="button" data-answer="fleet" data-value="transport">Trucking / transportation</button>
+<button type="button" data-answer="fleet" data-value="construction">Construction / equipment</button>
+<button type="button" data-answer="fleet" data-value="delivery">Distribution / delivery</button>
+</div>
+<button type="button" class="btn ghost assessment-back">Back</button>
+</div>
+
+<div class="tool-card assessment-step" data-assessment-step="2">
+<small>STEP 3 / 4</small>
+<h3>How important is video safety?</h3>
+<p>Dash cameras can be optional, basic, or the center of the safety program.</p>
+<div class="options">
+<button type="button" data-answer="video" data-value="none">Not ready for cameras yet</button>
+<button type="button" data-answer="video" data-value="road">Road-facing protection</button>
+<button type="button" data-answer="video" data-value="dual">Road + driver AI coaching</button>
+<button type="button" data-answer="video" data-value="multi">Multi-camera visibility</button>
+</div>
+<button type="button" class="btn ghost assessment-back">Back</button>
+</div>
+
+<div class="tool-card assessment-step" data-assessment-step="3">
+<small>STEP 4 / 4</small>
+<h3>What would help you move forward?</h3>
+<p>This helps shape the next step after the meeting.</p>
+<div class="options">
+<button type="button" data-answer="decision" data-value="overview">Understand the options</button>
+<button type="button" data-answer="decision" data-value="pilot">Run a pilot first</button>
+<button type="button" data-answer="decision" data-value="roi">See ROI / cost impact</button>
+<button type="button" data-answer="decision" data-value="quote">Build a proposal</button>
+</div>
+<button type="button" class="btn ghost assessment-back">Back</button>
+</div>
+
+<div class="result-card assessment-result" data-assessment-result="assets">
+<small>RECOMMENDED DIRECTION</small>
+<h3>Asset-Heavy Fleet Visibility</h3>
+<h4>GO ANYWHERE + DIGITAL MATTER</h4>
+<p>Start with GO Anywhere, then add Digital Matter trackers where deeper asset visibility is needed.</p>
+<div class="result-start"><span>Based on your responses, most fleets like yours start here:</span><strong>GO ANYWHERE / GO ASSET PRO</strong></div>
+<div class="cta-row"><a class="btn primary" href="#pricing">View Recommended Plans</a><button type="button" class="btn ghost assessment-restart">Restart</button></div>
+</div>
+
+<div class="result-card assessment-result" data-assessment-result="compliance">
+<small>RECOMMENDED DIRECTION</small>
+<h3>Advanced Fleet Management + Compliance</h3>
+<h4>GEOTAB</h4>
+<p>Geotab is the strongest fit for ELD, HOS, DVIR, IFTA, diagnostics, maintenance, and enterprise fleet intelligence.</p>
+<div class="result-start"><span>Based on your responses, most fleets like yours start here:</span><strong>GO ADVANCED / GO SAFETY PLUS</strong></div>
+<div class="cta-row"><a class="btn primary" href="#pricing">View Recommended Plans</a><button type="button" class="btn ghost assessment-restart">Restart</button></div>
+</div>
+
+<div class="result-card assessment-result" data-assessment-result="safety">
+<small>RECOMMENDED DIRECTION</small>
+<h3>Video Safety + Driver Coaching</h3>
+<h4>ZenduONE or Geotab GO Focus</h4>
+<p>Start with the safety goal first: road-facing, dual-view AI, or multi-camera visibility.</p>
+<div class="result-start"><span>Based on your responses, most fleets like yours start here:</span><strong>GO SAFETY / GO SAFETY PLUS / ZenduONE Enterprise</strong></div>
+<div class="cta-row"><a class="btn primary" href="#pricing">View Recommended Plans</a><button type="button" class="btn ghost assessment-restart">Restart</button></div>
+</div>
+
+<div class="result-card assessment-result" data-assessment-result="visibility">
+<small>RECOMMENDED DIRECTION</small>
+<h3>Fleet Visibility + Accountability</h3>
+<h4>GEOTAB or ZenduONE</h4>
+<p>A GPS-first program gives visibility, accountability, reporting, and a clean path to add cameras or assets later.</p>
+<div class="result-start"><span>Based on your responses, most fleets like yours start here:</span><strong>GO BASE / GO ADVANCED / ZenTRACK GPS</strong></div>
+<div class="cta-row"><a class="btn primary" href="#pricing">View Recommended Plans</a><button type="button" class="btn ghost assessment-restart">Restart</button></div>
+</div>
 </div>
 <div class="advisor">
 <div>🚚<h3>Fleet Management</h3>
@@ -228,7 +316,7 @@
 <h2>Everything In<br>The Ecosystem</h2>
 <div class="eco-grid">
 <div class="eco-stack">
-<button data-eco="geotab" class="on" aria-expanded="true">
+<button data-eco="geotab" class="is-active" aria-expanded="true">
 <strong>Geotab Platform</strong>
 <span>GO9 / GO10 • GO Rugged • GO Anywhere</span>
 <span class="eco-expanded"><span class="eco-description">Connect vehicles, drivers, maintenance, compliance, and operational data in one flexible fleet platform.</span><span class="eco-benefits"><span>Real-time fleet visibility</span><span>Diagnostics and compliance</span><span>Open integration ecosystem</span></span><span class="eco-fit"><span>BEST FIT FOR</span><b>Fleets that need a scalable operational foundation</b></span></span>
@@ -364,23 +452,29 @@
 
 </div>
 </section>
-<section id="cost" class="section center">
+<section id="cost" class="section center" data-interaction="tabs">
 <p class="eyebrow">THE COST OF DOING NOTHING — NETS 2023</p>
 <h2>What <em>Inaction Costs</em><br>
 Your Fleet
 </h2>
 <p class="center-sub">Click any bubble to see what is behind the number.</p>
 <div class="bubbles" id="cost-bubbles">
+<button type="button" class="is-active" data-tab-target="crash-yearly" aria-selected="true"><strong>20%</strong><span>Crash Yearly</span></button>
+<button type="button" data-tab-target="property-damage" aria-selected="false"><strong>$5K+</strong><span>Property Damage</span></button>
+<button type="button" data-tab-target="average-cost" aria-selected="false"><strong>$26K</strong><span>Avg Cost</span></button>
+<button type="button" data-tab-target="injury-crash" aria-selected="false"><strong>$75K+</strong><span>Injury Crash</span></button>
+<button type="button" data-tab-target="fatal-crash" aria-selected="false"><strong>$750K+</strong><span>Fatal Crash</span></button>
 </div>
 <div class="info-box">
-<h3 id="cost-title">
-</h3>
-<p id="cost-detail">
-</p>
+<div class="interaction-panel is-active" data-tab-panel="crash-yearly"><h3>20% — Crash Yearly</h3><p>One in five commercial fleets experiences a crash each year.</p></div>
+<div class="interaction-panel" data-tab-panel="property-damage"><h3>$5K+ — Property Damage</h3><p>Even minor incidents quickly exceed $5,000 once repairs and downtime are included.</p></div>
+<div class="interaction-panel" data-tab-panel="average-cost"><h3>$26K — Avg Cost</h3><p>A fleet accident creates a meaningful operational cost.</p></div>
+<div class="interaction-panel" data-tab-panel="injury-crash"><h3>$75K+ — Injury Crash</h3><p>Injury claims add medical costs, workers comp, insurance pressure, and brand risk.</p></div>
+<div class="interaction-panel" data-tab-panel="fatal-crash"><h3>$750K+ — Fatal Crash</h3><p>Severe events can threaten the business through liability, legal expense, and reputational loss.</p></div>
 </div>
 <div class="impact-callout">Traxxis helps companies reduce on-the-road incidents by over 60%.</div>
 </section>
-<section id="distraction" class="section">
+<section id="distraction" class="section" data-interaction="tabs" data-activate-on="hover">
 <p class="eyebrow">WHY AI CAMERAS MATTER</p>
 <h2>Distraction <em>Kills</em><br>
 Reaction Time
@@ -388,12 +482,18 @@ Reaction Time
 <p class="lead">At 55 mph, reading a single text can mean traveling the length of a football field without looking at the road. That is why in-cab detection, alerts, and driver coaching matter.</p>
 <div class="distraction-layout">
 <div class="reaction" id="reaction">
+<div data-tab-target="undistracted" tabindex="0"><span>Undistracted Driver</span><b style="width:30%">Baseline (1 sec)</b></div>
+<div data-tab-target="drink-drive" tabindex="0"><span>At Drink-Drive Limit</span><b style="width:42%">+13% slower</b></div>
+<div data-tab-target="hands-free" tabindex="0"><span>Hands-Free Phone</span><b style="width:58%">+27% slower</b></div>
+<div class="is-active" data-tab-target="texting" tabindex="0"><span>Texting While Driving</span><b style="width:74%">+37% slower</b></div>
+<div data-tab-target="hand-held" tabindex="0"><span>Hand-Held Phone</span><b style="width:88%">+46% slower</b></div>
 </div>
 <div class="hover-box">
-<h3 id="react-title">
-</h3>
-<p id="react-detail">
-</p>
+<div class="interaction-panel" data-tab-panel="undistracted"><h3>Undistracted Driver</h3><p>A focused driver can respond in about one second.</p></div>
+<div class="interaction-panel" data-tab-panel="drink-drive"><h3>At Drink-Drive Limit</h3><p>Even legal-limit impairment can slow response.</p></div>
+<div class="interaction-panel" data-tab-panel="hands-free"><h3>Hands-Free Phone</h3><p>Hands-free does not mean distraction-free.</p></div>
+<div class="interaction-panel is-active" data-tab-panel="texting"><h3>Texting While Driving</h3><p>Texting combines visual, manual, and cognitive distraction.</p></div>
+<div class="interaction-panel" data-tab-panel="hand-held"><h3>Hand-Held Phone</h3><p>One of the worst measured behaviors for reaction speed.</p></div>
 </div>
 </div>
 <div class="callout">AI cameras detect distraction before an incident occurs — then coach safer behavior in real time.</div>
@@ -456,18 +556,26 @@ Reaction Time
 </div>
 </div>
 </section>
-<section id="savings" class="section center">
+<section id="savings" class="section center" data-interaction="tabs" data-activate-on="hover">
 <p class="eyebrow">ANNUAL SAVINGS MODEL — 100-VEHICLE FLEET</p>
 <h2>Savings Delivered</h2>
 <p class="center-sub">100 vehicles • 30,000 mi/yr • $3.80/gal • 15 MPG • 20 accidents/yr baseline</p>
 <p class="center-sub">Hover over each bar to see how the number is calculated.</p>
 <div class="savings-chart" id="savings-chart">
+<div class="save-col is-active" data-tab-target="fuel-savings" tabindex="0"><b>$228K</b><div class="save-track"><span class="blue" style="height:46%"></span></div><strong>Fuel Savings</strong></div>
+<div class="save-col" data-tab-target="accident-savings" tabindex="0"><b>$312K</b><div class="save-track"><span class="greenish" style="height:58%"></span></div><strong>Accident Savings</strong></div>
+<div class="save-col" data-tab-target="operational-savings" tabindex="0"><b>$45K</b><div class="save-track"><span class="orangebar" style="height:28%"></span></div><strong>Ops Savings</strong></div>
+<div class="save-col" data-tab-target="insurance-impact" tabindex="0"><b>~$50K</b><div class="save-track"><span class="purple" style="height:32%"></span></div><strong>Insurance</strong></div>
+<div class="save-col" data-tab-target="traxxis-investment" tabindex="0"><b>-$48K</b><div class="save-track"><span class="redbar" style="height:22%"></span></div><strong>Traxxis Investment</strong></div>
+<div class="save-col" data-tab-target="net-savings" tabindex="0"><b>$587K</b><div class="save-track"><span class="greenish" style="height:78%"></span></div><strong>Net Savings</strong></div>
 </div>
 <div class="calculation-hover">
-<h3 id="save-title">
-</h3>
-<p id="save-detail">
-</p>
+<div class="interaction-panel is-active" data-tab-panel="fuel-savings"><h3>Fuel Savings: $228K</h3><p>Fuel Savings = (100 vehicles × 30,000 annual miles ÷ 15 MPG × $3.80/gal) × estimated fuel improvement.</p></div>
+<div class="interaction-panel" data-tab-panel="accident-savings"><h3>Accident Savings: $312K</h3><p>Accident Savings = 20 incidents × $26,081 average accident cost × 60% reduction.</p></div>
+<div class="interaction-panel" data-tab-panel="operational-savings"><h3>Ops Savings: $45K</h3><p>Operational Savings = estimated 15% efficiency improvement.</p></div>
+<div class="interaction-panel" data-tab-panel="insurance-impact"><h3>Insurance: ~$50K</h3><p>Insurance impact is modeled from lower claims and stronger evidence.</p></div>
+<div class="interaction-panel" data-tab-panel="traxxis-investment"><h3>Traxxis Investment: -$48K</h3><p>Traxxis Investment = annual bundled safety-plan investment.</p></div>
+<div class="interaction-panel" data-tab-panel="net-savings"><h3>Net Savings: $587K</h3><p>Net = Fuel + Accident + Operational + Insurance impact − Traxxis Investment.</p></div>
 <small>References: NETS, FMCSA, Transport Research Laboratory, and fleet safety/telematics industry benchmarks.</small>
 </div>
 </section>
@@ -506,6 +614,12 @@ Reaction Time
 </tr>
 </thead>
 <tbody id="comp-body">
+<tr><td>Years in Business</td><td class="traxxis-col"><span class="check">✓</span><strong>25 Years (Since 2002)</strong></td><td>~10 Years</td><td>~10 Years</td><td>~20 Years</td></tr>
+<tr><td>Platform Options</td><td class="traxxis-col"><span class="check">✓</span><strong>Geotab + ZenduONE + LytxONE</strong></td><td>Single</td><td>Single</td><td>Limited</td></tr>
+<tr><td>Hardware Included</td><td class="traxxis-col"><span class="check">✓</span><strong>All Bundled Plans</strong></td><td>Separate</td><td>Separate</td><td>Varies</td></tr>
+<tr><td>Dedicated Support</td><td class="traxxis-col"><span class="check">✓</span><strong>Direct Expert Access</strong></td><td>Scaled</td><td>Scaled</td><td>Tiered</td></tr>
+<tr><td>Professional Install</td><td class="traxxis-col"><span class="check">✓</span><strong>Full Install Service</strong></td><td>Self-Install</td><td>Self-Install</td><td>Extra Fee</td></tr>
+<tr><td>Camera Options</td><td class="traxxis-col"><span class="check">✓</span><strong>GO Focus + ZenCAM + LytxONE</strong></td><td>Yes</td><td>Yes</td><td>Limited</td></tr>
 </tbody>
 </table>
 </div>
@@ -516,22 +630,54 @@ Reaction Time
 <h2>Questions?<br>
 <em>Answers.</em></h2>
 <p class="lead">Good questions deserve clear answers. Click a question to open the answer.</p>
-<div class="faq-accordion" id="faq-list">
+<div class="faq-accordion" id="faq-list" data-interaction="accordion">
+<div class="faq-item is-active">
+<button type="button" aria-expanded="true"><span>How does Traxxis compare to Samsara or other providers?</span><b>−</b></button>
+<p>We represent multiple best-in-class platforms, so we match the technology to your operation.</p>
+</div>
+<div class="faq-item">
+<button type="button" aria-expanded="false"><span>Are your prices competitive?</span><b>+</b></button>
+<p>Yes — the better comparison is total cost of ownership with hardware, onboarding, and support.</p>
+</div>
+<div class="faq-item">
+<button type="button" aria-expanded="false"><span>We already have GPS. Why switch?</span><b>+</b></button>
+<p>Modern fleets need AI cameras, coaching, asset tracking, compliance tools, and integrated support.</p>
+</div>
+<div class="faq-item">
+<button type="button" aria-expanded="false"><span>Is a 3-year agreement necessary?</span><b>+</b></button>
+<p>It allows us to include hardware with no upfront cost and support the deployment properly.</p>
+</div>
+<div class="faq-item">
+<button type="button" aria-expanded="false"><span>Will drivers be comfortable with cameras?</span><b>+</b></button>
+<p>Drivers quickly understand video protects them from false claims and helps coach safer habits.</p>
+</div>
+<div class="faq-item">
+<button type="button" aria-expanded="false"><span>How quickly can we deploy?</span><b>+</b></button>
+<p>Most fleets are operational within a few weeks depending on fleet size and scope.</p>
+</div>
 </div>
 </section>
-<section id="timeline" class="section center">
+<section id="timeline" class="section center" data-interaction="tabs">
 <p class="eyebrow">ROI TIMELINE</p>
 <h2>From Signature<br>To Savings</h2>
 <div class="roi-line" id="timeline-line">
+<button type="button" class="is-active" data-tab-target="sign-order" aria-selected="true"><b>Day 1</b><span>Sign &amp; Order</span></button>
+<button type="button" data-tab-target="hardware-ships" aria-selected="false"><b>Week 1</b><span>Hardware Ships</span></button>
+<button type="button" data-tab-target="install-training" aria-selected="false"><b>Week 3</b><span>Install &amp; Training</span></button>
+<button type="button" data-tab-target="go-live" aria-selected="false"><b>Month 1</b><span>Go Live</span></button>
+<button type="button" data-tab-target="break-even" aria-selected="false"><b>Months 3–6</b><span>Break-Even</span></button>
+<button type="button" data-tab-target="full-roi" aria-selected="false"><b>Year 1</b><span>Full ROI</span></button>
 </div>
 <div class="timeline-callout">
-<h3 id="time-title">
-</h3>
-<p id="time-detail">
-</p>
+<div class="interaction-panel is-active" data-tab-panel="sign-order"><h3>Sign &amp; Order</h3><p>Agreement executed and onboarding begins.</p></div>
+<div class="interaction-panel" data-tab-panel="hardware-ships"><h3>Hardware Ships</h3><p>Pre-configured devices ship ready to install.</p></div>
+<div class="interaction-panel" data-tab-panel="install-training"><h3>Install &amp; Training</h3><p>Onsite install and training completed.</p></div>
+<div class="interaction-panel" data-tab-panel="go-live"><h3>Go Live</h3><p>Fleet is fully operational.</p></div>
+<div class="interaction-panel" data-tab-panel="break-even"><h3>Break-Even</h3><p>Savings exceed monthly investment.</p></div>
+<div class="interaction-panel" data-tab-panel="full-roi"><h3>Full ROI</h3><p>Long-term savings and optimization.</p></div>
 </div>
 </section>
-<section id="pricing" class="section">
+<section id="pricing" class="section" data-interaction="tabs">
 <p class="eyebrow">BUNDLED PLANS — HARDWARE INCLUDED</p>
 <h2>Simple Pricing</h2>
 <p class="lead">All plans include hardware in return for a 3-year service agreement. Equipment value shown is included — no upfront hardware cost on bundled plans.</p>
@@ -547,8 +693,47 @@ Reaction Time
 <br>on bundled plans.</div>
 </div>
 <div class="tabs" id="tabs">
+<button type="button" class="is-active" data-tab-target="geotab-plans" aria-selected="true">Geotab Plans</button>
+<button type="button" data-tab-target="zendu-plans" aria-selected="false">ZenduONE Plans</button>
+<button type="button" data-tab-target="lytx-plans" aria-selected="false">LytxONE Plans</button>
+<button type="button" data-tab-target="asset-plans" aria-selected="false">Asset Tracking Plans</button>
 </div>
-<div class="price-grid five" id="price-grid">
+
+<div class="interaction-panel is-active" data-tab-panel="geotab-plans">
+<div class="price-grid five">
+<div class="price-card"><h3>GO ANYWHERE</h3><div class="price">$14<span>.99/mo</span></div><ul><li>✓ Portable asset tracking</li><li>✓ No wiring or install needed</li><li>✓ Long battery life</li><li>✓ Bluetooth beacon support</li><li>✓ Trailers, equipment, containers</li></ul></div>
+<div class="price-card"><h3>GO BASE</h3><div class="price">$19<span>.99/mo</span></div><ul><li>✓ Real-time GPS tracking</li><li>✓ Trip history &amp; replay</li><li>✓ Geofencing &amp; zone alerts</li><li>✓ Unlimited users</li><li>✓ Lifetime GO device warranty</li></ul></div>
+<div class="price-card"><h3>GO ADVANCED</h3><div class="price">$29<span>.99/mo</span></div><ul><li>✓ Everything in GO BASE</li><li>✓ Engine diagnostics</li><li>✓ Fuel tracking</li><li>✓ Driver scorecards</li><li>✓ Maintenance alerts</li><li>✓ DVIR</li></ul></div>
+<div class="price-card"><h3>GO SAFETY</h3><div class="price">$34<span>.99/mo</span></div><ul><li>✓ Everything in GO ADVANCED</li><li>✓ GO Focus event camera</li><li>✓ Collision detection</li><li>✓ Tailgating alerts</li><li>✓ Event video upload</li></ul></div>
+<div class="price-card popular"><b class="ribbon">MOST POPULAR</b><h3>GO SAFETY PLUS</h3><div class="price">$39<span>.99/mo</span></div><ul><li>✓ Everything in GO SAFETY</li><li>✓ GO Focus Plus dual-view AI</li><li>✓ Road + driver view</li><li>✓ Live streaming</li><li>✓ Remote retrieval</li><li>✓ Driver coaching</li></ul></div>
+</div>
+</div>
+
+<div class="interaction-panel" data-tab-panel="zendu-plans">
+<div class="price-grid">
+<div class="price-card"><h3>ZenTRACK GPS</h3><div class="price">$19<span>.99/mo</span></div><ul><li>✓ GPS tracking</li><li>✓ Trip replay</li><li>✓ Driver behavior</li><li>✓ ZenduONE web + mobile</li></ul></div>
+<div class="price-card"><h3>ZenCAM SAFETY</h3><div class="price">$34<span>.99/mo</span></div><ul><li>✓ ZenCAM LITE or PLUS</li><li>✓ Road + Driver View</li><li>✓ 360-Degree View</li><li>✓ ADAS + DMS</li><li>✓ LIVESTREAM Video</li><li>✓ GPS Tracking</li></ul></div>
+<div class="price-card popular"><b class="ribbon">MOST POPULAR</b><h3>ZenCAM SAFETY PLUS</h3><div class="price">$39<span>.99/mo</span></div><ul><li>✓ Everything in SAFETY</li><li>✓ Video retrieval</li><li>✓ Facial AI assignment</li><li>✓ DVIR forms</li><li>✓ Advanced coaching</li></ul></div>
+<div class="price-card"><h3>ZenCAM SAFETY PRO</h3><div class="price">$44<span>.99/mo</span></div><ul><li>✓ Everything in SAFETY PLUS</li><li>✓ Human Review Service</li><li>✓ 8-Minute Video Retrieval</li><li>✓ Real-Time GPS Tracking</li></ul></div>
+</div>
+</div>
+
+<div class="interaction-panel" data-tab-panel="lytx-plans">
+<div class="price-grid">
+<div class="price-card"><h3>LYTXONE ASSET</h3><div class="price">$14<span>.99/mo</span></div><ul><li>✓ Battery asset tracker</li><li>✓ Trailer &amp; equipment visibility</li><li>✓ Long-life battery platform</li><li>✓ Portable deployment</li><li>✓ Theft recovery support</li></ul></div>
+<div class="price-card"><h3>LYTXONE TRACK</h3><div class="price">$19<span>.99/mo</span></div><ul><li>✓ OBDII vehicle tracker</li><li>✓ Real-time GPS tracking</li><li>✓ Trip history &amp; visibility</li><li>✓ Driver accountability</li><li>✓ Fleet utilization insights</li></ul></div>
+<div class="price-card"><h3>LYTXONE SAFETY</h3><div class="price">$29<span>.99/mo</span></div><ul><li>✓ Video-only safety platform</li><li>✓ Event-triggered recording</li><li>✓ Driver behavior review</li><li>✓ Incident evidence capture</li><li>✓ Coaching workflows</li></ul></div>
+<div class="price-card popular"><b class="ribbon">MOST POPULAR</b><h3>LYTXONE SAFETY PLUS</h3><div class="price">$34<span>.99/mo</span></div><ul><li>✓ All-in-one video + telematics</li><li>✓ AI safety monitoring</li><li>✓ GPS + driver visibility</li><li>✓ Video event management</li><li>✓ Integrated fleet insights</li></ul></div>
+</div>
+</div>
+
+<div class="interaction-panel" data-tab-panel="asset-plans">
+<div class="price-grid">
+<div class="price-card"><h3>GO ANYWHERE BASE</h3><div class="price">$11<span>.99/mo</span></div><ul><li>✓ Geotab platform only</li><li>✓ Portable asset tracking</li><li>✓ No wiring or install needed</li><li>✓ Long battery life</li><li>✓ Best for simple location visibility</li></ul></div>
+<div class="price-card"><h3>GO ANYWHERE PRO</h3><div class="price">$14<span>.99/mo</span></div><ul><li>✓ Geotab platform only</li><li>✓ Everything in BASE</li><li>✓ Bluetooth + beacon integration options</li><li>✓ Powered option available</li><li>✓ Enhanced asset visibility</li></ul></div>
+<div class="price-card"><h3>GO ASSET</h3><div class="price">$19<span>.99/mo</span></div><ul><li>✓ Digital Matter Yabby, Oyster, or Barra</li><li>✓ Works on Geotab or ZenduONE</li><li>✓ Battery-powered asset tracking</li><li>✓ Trailer, equipment, and container visibility</li><li>✓ Flexible deployment options</li></ul></div>
+<div class="price-card popular"><b class="ribbon">MOST POPULAR</b><h3>GO ASSET PRO</h3><div class="price">$29<span>.99/mo</span></div><ul><li>✓ Digital Matter Remora</li><li>✓ Works on Geotab or ZenduONE</li><li>✓ Ultra-long battery</li><li>✓ Tamper detection</li><li>✓ High-value assets</li></ul></div>
+</div>
 </div>
 </section>
 <section id="cta" class="closing">

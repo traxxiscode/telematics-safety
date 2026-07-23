@@ -429,7 +429,7 @@ p,.lead {
   background:rgba(255,104,32,.06);
   border-color:rgba(255,104,32,.24)
 }
-.eco-stack button.on {
+.eco-stack button.is-active {
   border-color:var(--cyan);
   box-shadow:0 20px 48px rgba(0,168,204,.16);
   transform:scale(1.02)
@@ -555,7 +555,7 @@ p,.lead {
   cursor:pointer;
   transition:.22s
 }
-.bubbles button:hover,.bubbles button.on {
+.bubbles button:hover,.bubbles button.is-active {
   transform:translateY(-6px);
   border-color:var(--orange);
   box-shadow:0 20px 50px rgba(255,104,32,.16)
@@ -938,7 +938,7 @@ th:first-child,td:first-child {
   font-weight:900;
   cursor:pointer
 }
-.tabs .on {
+.tabs .is-active {
   border-color:var(--cyan);
   color:#fff;
   background:rgba(0,168,204,.10)
@@ -1049,7 +1049,7 @@ th:first-child,td:first-child {
   border:2px solid var(--orange);
   color:var(--orange)
 }
-.roi-line button.on b {
+.roi-line button.is-active b {
   border-color:var(--green);
   color:var(--green);
   box-shadow:0 0 28px rgba(0,184,110,.22)
@@ -1503,7 +1503,7 @@ p,.lead {
   background:rgba(255,255,255,.025);
   border-color:rgba(255,255,255,.09)
 }
-.eco-stack button.on {
+.eco-stack button.is-active {
   border-color:#8b5cf6;
   background:linear-gradient(135deg,rgba(59,130,246,.11),rgba(249,115,22,.08));
   box-shadow:0 24px 60px rgba(91,33,182,.2)
@@ -1605,7 +1605,7 @@ table {
   padding:13px 23px;
   background:rgba(255,255,255,.03)
 }
-.tabs .on {
+.tabs .is-active {
   border-color:#8b5cf6;
   background:linear-gradient(100deg,rgba(59,130,246,.16),rgba(249,115,22,.13))
 }
@@ -1653,7 +1653,7 @@ table {
   color:#c4b5fd;
   background:rgba(139,92,246,.06)
 }
-.roi-line button.on b {
+.roi-line button.is-active b {
   border-color:#f97316;
   color:#fff;
   background:linear-gradient(135deg,#3b82f6,#8b5cf6,#f97316);
@@ -2287,7 +2287,7 @@ header:after {
 #ecosystem .eco-stack button:hover {
   transform:translateY(-3px)
 }
-#ecosystem .eco-stack button.on {
+#ecosystem .eco-stack button.is-active {
   min-height:330px;
   border-radius:42px;
   transform:scale(1.035);
@@ -2295,7 +2295,7 @@ header:after {
   background:radial-gradient(circle at 20% 0%,rgba(59,130,246,.22),transparent 52%),rgba(20,24,42,.92);
   box-shadow:0 26px 70px rgba(30,64,175,.24),inset 0 1px 0 rgba(255,255,255,.08)
 }
-#ecosystem .eco-stack:last-child button.on {
+#ecosystem .eco-stack:last-child button.is-active {
   border-color:rgba(251,146,60,.65);
   background:radial-gradient(circle at 85% 0%,rgba(249,115,22,.2),transparent 54%),rgba(25,20,40,.92);
   box-shadow:0 26px 70px rgba(126,34,206,.22),inset 0 1px 0 rgba(255,255,255,.08)
@@ -2318,7 +2318,7 @@ header:after {
   visibility:hidden;
   transition:max-height .35s ease,opacity .2s ease .02s,visibility 0s linear .35s
 }
-#ecosystem button.on .eco-expanded {
+#ecosystem button.is-active .eco-expanded {
   max-height:260px;
   opacity:1;
   visibility:visible;
@@ -2409,7 +2409,7 @@ header:after {
     min-height:100px;
     padding:22px 26px
   }
-  #ecosystem .eco-stack button.on {
+  #ecosystem .eco-stack button.is-active {
     min-height:320px;
     border-radius:36px;
     transform:none
@@ -2460,6 +2460,68 @@ header:after {
   margin-inline:-.025em -.09em;
   -webkit-box-decoration-break:clone;
   box-decoration-break:clone
+}
+
+/* Static, indexable interaction panels; JavaScript changes state only. */
+.interaction-panel,
+.assessment-step,
+.assessment-result {
+  display:none
+}
+.interaction-panel.is-active,
+.assessment-step.is-active,
+.assessment-result.is-active {
+  display:block
+}
+.faq-item>p {
+  display:none
+}
+.faq-item.is-active>p {
+  display:block
+}
+
+/* Keep controls calm and legible; reserve richer gradients for display text. */
+.btn.primary,
+.btn.blue,
+.nav-demo {
+  background:#2563eb!important;
+  box-shadow:0 12px 28px rgba(37,99,235,.22)
+}
+.progress .active,
+.progress .done {
+  background:#3b82f6
+}
+.tabs .is-active {
+  background:rgba(59,130,246,.12);
+  border-color:rgba(96,165,250,.68)
+}
+.ribbon {
+  background:#f97316
+}
+.roi-line button.is-active b {
+  background:#f97316;
+  border-color:#fb923c;
+  box-shadow:0 0 28px rgba(249,115,22,.24)
+}
+#ecosystem .eco-stack button,
+#ecosystem .eco-stack button.orange {
+  background:rgba(59,130,246,.07)
+}
+#ecosystem .eco-stack:last-child button {
+  background:rgba(249,115,22,.065)
+}
+#ecosystem .eco-stack button.is-active {
+  background:rgba(30,64,175,.28)
+}
+#ecosystem .eco-stack:last-child button.is-active {
+  background:rgba(154,52,18,.24)
+}
+.pill,
+.eyebrow,
+.diff-badge,
+.winner-badge,
+.ribbon {
+  background-image:none
 }
 
 
