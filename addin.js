@@ -1,3 +1,32 @@
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if ('IntersectionObserver' in window && !reducedMotion) {
+  document.documentElement.classList.add('has-scroll-reveal');
+
+  const revealSections = document.querySelectorAll('main > section');
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    });
+  }, {
+    threshold:0.16,
+    rootMargin:'0px 0px -10% 0px'
+  });
+
+  revealSections.forEach((section, index) => {
+    section.classList.add('scroll-reveal');
+    if (index === 0) section.classList.add('is-visible');
+    else revealObserver.observe(section);
+
+    section.addEventListener('focusin', () => {
+      section.classList.add('is-visible');
+      revealObserver.unobserve(section);
+    }, { once:true });
+  });
+}
+
 const $ = id => document.getElementById(id);
 const fmt = number => '$' + Math.round(number).toLocaleString();
 
