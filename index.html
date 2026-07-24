@@ -426,12 +426,11 @@ That <em>Fits Your Fleet</em></h2>
 
 </div>
 </section>
-<section id="cost" class="section center" data-interaction="tabs">
+<section id="cost" class="section center" data-interaction="tabs" data-auto-advance="5000">
 <p class="eyebrow">THE COST OF DOING NOTHING — NETS 2023</p>
 <h2>What <em>Inaction Costs</em><br>
 Your Fleet
 </h2>
-<p class="center-sub">Click any bubble to see what is behind the number.</p>
 <div class="bubbles" id="cost-bubbles">
 <button type="button" class="is-active" data-tab-target="crash-yearly" aria-selected="true"><strong>20%</strong><span>Crash Yearly</span></button>
 <button type="button" data-tab-target="property-damage" aria-selected="false"><strong>$5K+</strong><span>Property Damage</span></button>
@@ -439,16 +438,16 @@ Your Fleet
 <button type="button" data-tab-target="injury-crash" aria-selected="false"><strong>$75K+</strong><span>Injury Crash</span></button>
 <button type="button" data-tab-target="fatal-crash" aria-selected="false"><strong>$750K+</strong><span>Fatal Crash</span></button>
 </div>
-<div class="info-box">
-<div class="interaction-panel is-active" data-tab-panel="crash-yearly"><h3>20% — Crash Yearly</h3><p>One in five commercial fleets experiences a crash each year.</p></div>
-<div class="interaction-panel" data-tab-panel="property-damage"><h3>$5K+ — Property Damage</h3><p>Even minor incidents quickly exceed $5,000 once repairs and downtime are included.</p></div>
-<div class="interaction-panel" data-tab-panel="average-cost"><h3>$26K — Avg Cost</h3><p>A fleet accident creates a meaningful operational cost.</p></div>
-<div class="interaction-panel" data-tab-panel="injury-crash"><h3>$75K+ — Injury Crash</h3><p>Injury claims add medical costs, workers comp, insurance pressure, and brand risk.</p></div>
-<div class="interaction-panel" data-tab-panel="fatal-crash"><h3>$750K+ — Fatal Crash</h3><p>Severe events can threaten the business through liability, legal expense, and reputational loss.</p></div>
+<div class="cost-detail">
+<div class="interaction-panel is-active" data-tab-panel="crash-yearly"><p>One in five commercial fleets experiences a crash each year.</p></div>
+<div class="interaction-panel" data-tab-panel="property-damage"><p>Even minor incidents quickly exceed $5,000 once repairs and downtime are included.</p></div>
+<div class="interaction-panel" data-tab-panel="average-cost"><p>A fleet accident creates a meaningful operational cost.</p></div>
+<div class="interaction-panel" data-tab-panel="injury-crash"><p>Injury claims add medical costs, workers comp, insurance pressure, and brand risk.</p></div>
+<div class="interaction-panel" data-tab-panel="fatal-crash"><p>Severe events can threaten the business through liability, legal expense, and reputational loss.</p></div>
 </div>
 <div class="impact-callout">Traxxis helps companies reduce on-the-road incidents by over 60%.</div>
 </section>
-<section id="distraction" class="section" data-interaction="tabs" data-activate-on="hover">
+<section id="distraction" class="section" data-interaction="tabs" data-activate-on="hover" data-auto-advance="5000">
 <p class="eyebrow">WHY AI CAMERAS MATTER</p>
 <h2>Distraction <em>Kills</em><br>
 Reaction Time
@@ -456,18 +455,18 @@ Reaction Time
 <p class="lead">At 55 mph, reading a single text can mean traveling the length of a football field without looking at the road. That is why in-cab detection, alerts, and driver coaching matter.</p>
 <div class="distraction-layout">
 <div class="reaction" id="reaction">
-<div data-tab-target="undistracted" tabindex="0"><span>Undistracted Driver</span><b style="width:30%">Baseline (1 sec)</b></div>
+<div class="is-active" data-tab-target="undistracted" tabindex="0"><span>Undistracted Driver</span><b style="width:30%">Baseline (1 sec)</b></div>
 <div data-tab-target="drink-drive" tabindex="0"><span>At Drink-Drive Limit</span><b style="width:42%">+13% slower</b></div>
 <div data-tab-target="hands-free" tabindex="0"><span>Hands-Free Phone</span><b style="width:58%">+27% slower</b></div>
-<div class="is-active" data-tab-target="texting" tabindex="0"><span>Texting While Driving</span><b style="width:74%">+37% slower</b></div>
+<div data-tab-target="texting" tabindex="0"><span>Texting While Driving</span><b style="width:74%">+37% slower</b></div>
 <div data-tab-target="hand-held" tabindex="0"><span>Hand-Held Phone</span><b style="width:88%">+46% slower</b></div>
 </div>
-<div class="hover-box">
-<div class="interaction-panel" data-tab-panel="undistracted"><h3>Undistracted Driver</h3><p>A focused driver can respond in about one second.</p></div>
-<div class="interaction-panel" data-tab-panel="drink-drive"><h3>At Drink-Drive Limit</h3><p>Even legal-limit impairment can slow response.</p></div>
-<div class="interaction-panel" data-tab-panel="hands-free"><h3>Hands-Free Phone</h3><p>Hands-free does not mean distraction-free.</p></div>
-<div class="interaction-panel is-active" data-tab-panel="texting"><h3>Texting While Driving</h3><p>Texting combines visual, manual, and cognitive distraction.</p></div>
-<div class="interaction-panel" data-tab-panel="hand-held"><h3>Hand-Held Phone</h3><p>One of the worst measured behaviors for reaction speed.</p></div>
+<div class="reaction-detail">
+<div class="interaction-panel is-active" data-tab-panel="undistracted"><p>A focused driver can respond in about one second.</p></div>
+<div class="interaction-panel" data-tab-panel="drink-drive"><p>Even legal-limit impairment can slow response.</p></div>
+<div class="interaction-panel" data-tab-panel="hands-free"><p>Hands-free does not mean distraction-free.</p></div>
+<div class="interaction-panel" data-tab-panel="texting"><p>Texting combines visual, manual, and cognitive distraction.</p></div>
+<div class="interaction-panel" data-tab-panel="hand-held"><p>One of the worst measured behaviors for reaction speed.</p></div>
 </div>
 </div>
 <div class="callout">AI cameras detect distraction before an incident occurs — then coach safer behavior in real time.</div>

@@ -2820,4 +2820,129 @@ header:after {
   }
 }
 
+/* Cost and distraction are timed stories. Inactive controls stay quiet while
+   the current value and its plain-text explanation carry the hierarchy. */
+#cost .bubbles {
+  margin-top:46px
+}
+#cost .bubbles button {
+  color:#f8fafc;
+  background:rgba(255,255,255,.025);
+  border-color:rgba(255,255,255,.13);
+  box-shadow:none;
+  opacity:.54
+}
+#cost .bubbles button:hover,
+#cost .bubbles button.is-active {
+  color:#fb923c;
+  background:rgba(249,115,22,.055);
+  border-color:rgba(251,146,60,.65);
+  box-shadow:0 18px 46px rgba(249,115,22,.11);
+  opacity:1
+}
+#cost .bubbles button:not(.is-active):hover {
+  transform:translateY(-2px)
+}
+#cost .bubbles span {
+  color:currentColor;
+  opacity:.82
+}
+#cost .cost-detail,
+#distraction .reaction-detail {
+  position:relative;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none
+}
+#cost .cost-detail {
+  min-height:86px;
+  margin:34px auto 0
+}
+#distraction .reaction-detail {
+  min-height:112px
+}
+#cost .interaction-panel,
+#distraction .interaction-panel {
+  display:block;
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transform:translateY(18px);
+  pointer-events:none;
+  transition:
+    opacity .5s cubic-bezier(.22,1,.36,1),
+    transform .6s cubic-bezier(.22,1,.36,1)
+}
+#cost .interaction-panel.is-active,
+#distraction .interaction-panel.is-active {
+  opacity:1;
+  transform:none;
+  pointer-events:auto
+}
+#cost .interaction-panel p,
+#distraction .interaction-panel p {
+  margin:0;
+  color:#d7deea;
+  font-size:1.08rem;
+  line-height:1.7
+}
+#cost .impact-callout {
+  color:#86efac;
+  background:rgba(34,197,94,.065);
+  border-color:rgba(34,197,94,.24)
+}
+
+#distraction .reaction>[data-tab-target] {
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  border-radius:0;
+  background:transparent;
+  opacity:.48;
+  transform:none;
+  transition:opacity .3s ease,transform .4s cubic-bezier(.22,1,.36,1)
+}
+#distraction .reaction>[data-tab-target].is-active {
+  opacity:1;
+  transform:translateX(8px)
+}
+#distraction .reaction b {
+  background-image:linear-gradient(90deg,#22c55e 0%,#3b82f6 42%,#f59e0b 72%,#f97316 100%);
+  background-position:0 50%;
+  background-repeat:no-repeat
+}
+#distraction .reaction>[data-tab-target]:nth-child(1) b {
+  background-size:333.333% 100%
+}
+#distraction .reaction>[data-tab-target]:nth-child(2) b {
+  background-size:238.095% 100%
+}
+#distraction .reaction>[data-tab-target]:nth-child(3) b {
+  background-size:172.414% 100%
+}
+#distraction .reaction>[data-tab-target]:nth-child(4) b {
+  background-size:135.135% 100%
+}
+#distraction .reaction>[data-tab-target]:nth-child(5) b {
+  background-size:113.636% 100%
+}
+#distraction .callout {
+  color:#bfdbfe;
+  background:rgba(59,130,246,.065);
+  border-color:rgba(96,165,250,.24)
+}
+
+@media(max-width:800px) {
+  #cost .bubbles button {
+    width:132px;
+    height:132px;
+    font-size:1.55rem
+  }
+  #cost .cost-detail,
+  #distraction .reaction-detail {
+    min-height:130px
+  }
+}
+
 

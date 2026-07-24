@@ -43,10 +43,33 @@ function activateTab(component, target) {
 }
 
 document.querySelectorAll('[data-interaction="tabs"]').forEach(component => {
+  const triggers = [...component.querySelectorAll('[data-tab-target]')];
   const hover = component.dataset.activateOn === 'hover';
+  const autoAdvanceMs = reducedMotion ? 0 : Number(component.dataset.autoAdvance || 0);
+  let autoTimer;
+  let autoInView = !('IntersectionObserver' in window);
+  let autoPaused = false;
 
-  component.querySelectorAll('[data-tab-target]').forEach(trigger => {
-    const activate = () => activateTab(component, trigger.dataset.tabTarget);
+  const stopAutoAdvance = () => {
+    window.clearTimeout(autoTimer);
+  };
+
+  const scheduleAutoAdvance = () => {
+    stopAutoAdvance();
+    if (!autoAdvanceMs || !autoInView || autoPaused) return;
+    autoTimer = window.setTimeout(() => {
+      const currentIndex = Math.max(0, triggers.findIndex(trigger => trigger.classList.contains('is-active')));
+      const nextTrigger = triggers[(currentIndex + 1) % triggers.length];
+      activateTab(component, nextTrigger.dataset.tabTarget);
+      scheduleAutoAdvance();
+    }, autoAdvanceMs);
+  };
+
+  triggers.forEach(trigger => {
+    const activate = () => {
+      activateTab(component, trigger.dataset.tabTarget);
+      scheduleAutoAdvance();
+    };
     if (trigger.tagName !== 'BUTTON') trigger.setAttribute('role', 'button');
     trigger.addEventListener('click', activate);
     trigger.addEventListener('keydown', event => {
@@ -60,6 +83,38 @@ document.querySelectorAll('[data-interaction="tabs"]').forEach(component => {
       trigger.addEventListener('focus', activate);
     }
   });
+
+  if (autoAdvanceMs) {
+    triggers.forEach(trigger => {
+      trigger.addEventListener('pointerenter', () => {
+        autoPaused = true;
+        stopAutoAdvance();
+      });
+      trigger.addEventListener('pointerleave', () => {
+        autoPaused = false;
+        scheduleAutoAdvance();
+      });
+    });
+    component.addEventListener('focusin', () => {
+      autoPaused = true;
+      stopAutoAdvance();
+    });
+    component.addEventListener('focusout', event => {
+      if (component.contains(event.relatedTarget)) return;
+      autoPaused = false;
+      scheduleAutoAdvance();
+    });
+
+    if ('IntersectionObserver' in window) {
+      const autoObserver = new IntersectionObserver(entries => {
+        autoInView = entries[0].isIntersecting;
+        scheduleAutoAdvance();
+      }, { threshold:0.35 });
+      autoObserver.observe(component);
+    } else {
+      scheduleAutoAdvance();
+    }
+  }
 });
 
 document.querySelectorAll('[data-interaction="accordion"]').forEach(component => {
