@@ -54,13 +54,14 @@ document.querySelectorAll('[data-interaction="accordion"]').forEach(component =>
   });
 });
 
-const ecosystem = document.getElementById('ecosystem');
-ecosystem.querySelectorAll('[data-eco]').forEach(trigger => {
-  trigger.addEventListener('click', () => {
-    ecosystem.querySelectorAll('[data-eco]').forEach(other => {
-      const active = other === trigger;
-      other.classList.toggle('is-active', active);
-      other.setAttribute('aria-expanded', String(active));
+document.querySelectorAll('[data-interaction="exclusive-disclosure"]').forEach(component => {
+  component.querySelectorAll('[data-disclosure-trigger]').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      component.querySelectorAll('[data-disclosure-trigger]').forEach(other => {
+        const active = other === trigger;
+        other.classList.toggle('is-active', active);
+        other.setAttribute('aria-expanded', String(active));
+      });
     });
   });
 });
@@ -69,6 +70,7 @@ const assessment = document.querySelector('[data-assessment]');
 const assessmentCard = assessment.querySelector('.assessment-card');
 const assessmentSteps = assessment.querySelectorAll('[data-assessment-step]');
 const assessmentResults = assessment.querySelectorAll('[data-assessment-result]');
+const assessmentProgressBar = assessment.querySelector('.progress');
 const assessmentProgress = assessment.querySelectorAll('.progress span');
 let assessmentStep = 0;
 let assessmentAnswers = {};
@@ -83,6 +85,7 @@ function recommendationKey() {
 function renderAssessmentState() {
   const complete = assessmentStep >= assessmentSteps.length;
   assessmentCard.classList.toggle('is-complete', complete);
+  assessmentProgressBar.setAttribute('aria-valuenow', String(Math.min(assessmentStep + 1, assessmentSteps.length)));
 
   assessmentSteps.forEach((panel, index) => {
     panel.classList.toggle('is-active', !complete && index === assessmentStep);
