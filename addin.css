@@ -2719,11 +2719,17 @@ header:after {
   line-height:1;
   letter-spacing:-.025em
 }
-#competition .comparison-title .comparison-vs {
+#competition .comparison-title .comparison-side:first-child {
   color:var(--orange);
   font-size:1em;
   line-height:.85;
   letter-spacing:-.06em
+}
+#competition .comparison-title .comparison-vs {
+  color:#fff;
+  font-size:.46em;
+  line-height:1;
+  letter-spacing:-.025em
 }
 .closing h2 span:last-child {
   color:inherit;
