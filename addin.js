@@ -218,7 +218,7 @@ function calculateSavings() {
   const fuel = (vehicles * miles / mpg) * fuelCost * .3;
   const accident = accidents * 26081 * .6;
   const operations = vehicles * 3000 * .15;
-  const investment = vehicles * 34.99 * 12;
+  const investment = vehicles * 29.99 * 12;
   const net = fuel + accident + operations + (vehicles * currentMonthlyCost * 12) - investment;
 
   $('fuel').textContent = fmt(fuel);
