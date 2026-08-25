@@ -527,7 +527,12 @@ p,.lead {
   padding:0
 }
 .device.has-image img.lytx-track-image {
-  object-position:center bottom!important
+  position:absolute;
+  left:0;
+  top:50%;
+  height:auto;
+  object-fit:initial;
+  transform:translateY(-58%)
 }
 .product small {
   color:var(--cyan);
