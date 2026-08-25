@@ -526,14 +526,6 @@ p,.lead {
   object-fit:cover;
   padding:0
 }
-.device.has-image.lytx-hardware-image {
-  aspect-ratio:4/3;
-  background:#050812
-}
-.device.has-image.lytx-hardware-image img {
-  height:100%;
-  object-fit:contain!important
-}
 .product small {
   color:var(--cyan);
   font-weight:950;
