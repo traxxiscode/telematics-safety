@@ -527,7 +527,7 @@ p,.lead {
   padding:0
 }
 .device.has-image img.lytx-track-image {
-  object-position:center 65%
+  object-position:50% 80%!important
 }
 .product small {
   color:var(--cyan);
