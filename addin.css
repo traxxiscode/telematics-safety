@@ -526,6 +526,13 @@ p,.lead {
   object-fit:cover;
   padding:0
 }
+.device.has-image.lytx-hardware-image {
+  aspect-ratio:16/9;
+  background:#050812
+}
+.device.has-image.lytx-hardware-image img {
+  object-fit:contain
+}
 .product small {
   color:var(--cyan);
   font-weight:950;
