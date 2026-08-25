@@ -527,10 +527,11 @@ p,.lead {
   padding:0
 }
 .device.has-image.lytx-hardware-image {
-  aspect-ratio:16/9;
+  aspect-ratio:auto;
   background:#050812
 }
 .device.has-image.lytx-hardware-image img {
+  height:auto;
   object-fit:contain
 }
 .product small {
